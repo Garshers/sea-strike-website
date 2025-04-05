@@ -121,29 +121,6 @@
     letter-spacing: -0.03em;
     margin:20px;
 }
-.footer-copyright {
-    height: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background: rgba(15, 14, 34, 1);
-    z-index: 1000;
-    position: page;
-    margin-top: auto;
-    justify-content: center;
-}
-.footerCopyright {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    color: #F9F8FB;
-    letter-spacing: -0.01em;
-    text-align: center;
-    max-width: 400px;
-}
 
 @media screen and (max-width: 1250px) {
     body {
