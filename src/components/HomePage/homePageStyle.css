@@ -19,33 +19,3 @@
     min-height: 100vh;
     width: auto;
 }
-
-.galleryMainFrame{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.galleryRow{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-}
-
-.galleryBox{
-    min-height: 100px;
-    overflow: hidden;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-}
-
-.galleryImageStyle{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
