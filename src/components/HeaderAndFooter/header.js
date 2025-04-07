@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import Logo from "../../assets/Logo.png";
+
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -17,14 +19,20 @@ export function Header() {
 
     return (
         <header>
-            <div className='header-space'></div>
             <div id="header-frame" className={`header-frame ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="leftBox">
-                    {/*<img className="responsive-image" src="images/icon.png" alt="Icon" />*/}
+                    <img className="responsive-image" src={Logo} alt="Logo" />
                 </div>
                 <div className="rightBox">
                     <div className="menuButton" onClick={() => window.location.href = '/'}>
-                        <div className="menuText">Home</div>
+                        <div className="menuText">O nas</div>
+                        <div className="menuText">Pływanie dorośli</div>
+                        <div className="menuText">Pływanie dzieci</div>
+                        <div className="menuText">Interwały</div>
+                        <div className="menuText">Lokalizacje</div>
+                        <div className="menuText">Harmonogram</div>
+                        <div className="menuText">Wyjazdy</div>
+                        <div className="menuText">Start</div>
                     </div>
                 </div>
             </div>

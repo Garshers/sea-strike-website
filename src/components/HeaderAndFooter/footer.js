@@ -1,5 +1,11 @@
 import React from 'react';
 
+import Logo from "../../assets/Logo.png";
+import ig from "../../assets/ig.png";
+import fb from "../../assets/fb.png";
+import yt from "../../assets/yt.png";
+import mail from "../../assets/mail.png";
+
 function Footer() {
     return (
         <footer>
@@ -11,11 +17,27 @@ function Footer() {
                     </div>
                 </div>
                 <div className="box1-3">
+                    <img src={Logo} alt="Icon Logo" style={{ width: `60px`}} />
                     <div className="footer-mainText">Customer Service Office</div>
-                    {/*<img className="responsive-image" src="images/icon.png" alt="Icon" />*/}
                 </div>
                 <div className="box1-3">
-                    <div className="footerText">SeaStrike@SeaStrike.com</div>
+                    <div className='box1-3-row'>
+                        <img className="logo" src={mail} alt="Icon mail" />
+                        <div className="footerText">SeaStrike@SeaStrike.com</div>
+                    </div>
+                        <div className='box1-3-row'>
+                        <a href="https://www.instagram.com/izzzyway" target="_blank" rel="noopener noreferrer">
+                        <img className="logo" src={ig} alt="Icon IG" />
+                        </a>
+
+                        <a href="https://www.facebook.com/iza.pawik" target="_blank" rel="noopener noreferrer">
+                        <img className="logo" src={fb} alt="Icon FB" />
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+                        <img className="logo" src={yt} alt="Icon YT" style={{width: `40px`}}/>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
