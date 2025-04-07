@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './galleryStyle.css';
 
 function Gallery({ photos }) {
     const galleryLayouts = ['50/50', '40/60', '60/40'];
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 500);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <div className='galleryMainFrame'>
@@ -20,19 +30,17 @@ function Gallery({ photos }) {
                 return (
                     <div className='galleryRow' key={`row-${rowIndex}`}>
                         {photo1 && (
-                            <div className='galleryBox' style={{ width: `${width1}%`, margin: '10px 10px 0 10px'}}>
+                            <div className='galleryBox' style={{ width: isMobile ? 'auto' : `${width1}%`, margin: isMobile ? '0' : '10px 10px 0 10px',}}>
                                 <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id} />
                             </div>
                         )}
                         {photo2 && (
-                            <div className='galleryBox' style={{ width: `${width2}%`, margin: '10px 10px 0 0' }}>
+                            <div className='galleryBox'style={{width: isMobile ? 'auto' : `${width2}%`,margin: isMobile ? '0' : '10px 10px 0 0',}}>
                                 <img src={photo2.image} alt='' className='galleryImageStyle' key={photo2.id} />
                             </div>
                         )}
                         {!photo2 && width2 > 0 && (
-                            <div className='galleryBox' style={{ width: `100%`, height: '100%' }}>
-                                {/* Puste miejsce */}
-                            </div>
+                            <div className='galleryBox' style={{ width: 'auto', margin: '0.5% 0.5% 0 0.5%'}}></div>
                         )}
                     </div>
                 );
