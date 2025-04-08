@@ -31,12 +31,12 @@ function Gallery({ photos }) {
                     <div className='galleryRow' key={`row-${rowIndex}`}>
                         {photo1 && (
                             <div className='galleryBox' style={{ width: isMobile ? 'auto' : `${width1}%`, margin: isMobile ? '0' : '10px 10px 0 10px',}}>
-                                <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id} />
+                                <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id}/>
                             </div>
                         )}
                         {photo2 && (
                             <div className='galleryBox'style={{width: isMobile ? 'auto' : `${width2}%`,margin: isMobile ? '0' : '10px 10px 0 0',}}>
-                                <img src={photo2.image} alt='' className='galleryImageStyle' key={photo2.id} />
+                                <img src={photo2.image} alt='' className='galleryImageStyle' key={photo2.id}/>
                             </div>
                         )}
                         {!photo2 && width2 > 0 && (
