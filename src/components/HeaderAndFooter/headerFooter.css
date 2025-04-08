@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: row;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 65%, rgba(255,255,255,0.5) 80%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 100%);
-    transition: background 2s ease, opacity 1s ease;
     opacity: 1;
     position: fixed;
     top: 0;
@@ -15,12 +14,10 @@
 }
 .header-frame:hover {
     opacity: 1;
-    transition: background 2s ease, opacity 1s ease;
 }
 
 .header-frame.scrolled {
-    background: linear-gradient(to bottom, rgba(245, 245, 245, 1) 0%, rgba(245, 245, 245, 0) 100%);
-    transition: background 2s ease, opacity 1s ease;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 65%, rgba(255,255,255,0.5) 80%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 100%);
     opacity: 0.5;
 }
 
@@ -62,7 +59,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-
     color: black;
     transition: scale 0.3s ease;
 }
@@ -75,6 +71,28 @@
 
 .responsive-image {
     height: 100%;
+}
+
+.hamburger-menu {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    padding-bottom: 15px;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    letter-spacing: 0.04em;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Footer styles */
@@ -124,7 +142,7 @@
 .footer-mainText {
     font-family: "Oswald", sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 650;
     font-size: 40px;
     Line-height: 100%;
     color: black;
@@ -159,7 +177,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .footer-frame {
         flex-direction: column;
         height: fit-content;
@@ -167,5 +185,13 @@
 
     .box1-3 {
         width: 70%;
+    }
+
+    .menuButton {
+        display: none; /* Ukryj menu tekstowe na małych ekranach */
+    }
+
+    .hamburger-menu {
+        display: block; /* Pokaż ikonę hamburgera na małych ekranach */
     }
 }
