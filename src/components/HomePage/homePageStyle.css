@@ -18,4 +18,5 @@
 .mainVideoStyle {
     min-height: 100vh;
     width: auto;
+    object-fit: cover;
 }

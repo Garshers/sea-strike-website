@@ -32,15 +32,25 @@ function Gallery({ photos }) {
                         {photo1 && (
                             <div className='galleryBox' style={{ width: isMobile ? 'auto' : `${width1}%`, margin: isMobile ? '0' : '10px 10px 0 10px',}}>
                                 <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id}/>
+                                <a href="/o_nas" className='galleryButtonLink'>
+                                    Zobacz więcej
+                                </a>
                             </div>
                         )}
                         {photo2 && (
                             <div className='galleryBox'style={{width: isMobile ? 'auto' : `${width2}%`,margin: isMobile ? '0' : '10px 10px 0 0',}}>
                                 <img src={photo2.image} alt='' className='galleryImageStyle' key={photo2.id}/>
+                                <a href="/o_nas" className='galleryButtonLink'>
+                                    Zobacz więcej
+                                </a>
                             </div>
                         )}
                         {!photo2 && width2 > 0 && (
-                            <div className='galleryBox' style={{ width: 'auto', margin: '0.5% 0.5% 0 0.5%'}}></div>
+                            <div className='galleryBox' style={{ width: 'auto', margin: '0.5% 0.5% 0 0.5%'}}>
+                                <a href="/o_nas" className='galleryButtonLink'>
+                                    Zobacz więcej
+                                </a>
+                            </div>
                         )}
                     </div>
                 );
