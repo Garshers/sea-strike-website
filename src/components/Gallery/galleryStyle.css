@@ -54,7 +54,7 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .galleryRow{
         flex-direction: column;
         gap: 10px;
