@@ -30,26 +30,20 @@ function Gallery({ photos }) {
                 return (
                     <div className='galleryRow' key={`row-${rowIndex}`}>
                         {photo1 && (
-                            <div className='galleryBox' style={{ width: isMobile ? 'auto' : `${width1}%`, margin: isMobile ? '0' : '10px 10px 0 10px',}}>
+                            <div className='galleryBox' style={{ width: isMobile ? 'auto' : `${width1}%`, padding: isMobile ? '0' : '10px 5px 0 10px',}}>
                                 <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id}/>
-                                <a href="/o_nas" className='galleryButtonLink'>
-                                    Zobacz więcej
-                                </a>
+                                <a href="/o_nas" className='galleryButtonLink'>Zobacz więcej</a>
                             </div>
                         )}
                         {photo2 && (
-                            <div className='galleryBox'style={{width: isMobile ? 'auto' : `${width2}%`,margin: isMobile ? '0' : '10px 10px 0 0',}}>
+                            <div className='galleryBox'style={{width: isMobile ? 'auto' : `${width2}%`,padding: isMobile ? '0' : '10px 10px 0 5px',}}>
                                 <img src={photo2.image} alt='' className='galleryImageStyle' key={photo2.id}/>
-                                <a href="/o_nas" className='galleryButtonLink'>
-                                    Zobacz więcej
-                                </a>
+                                <a href="/o_nas" className='galleryButtonLink'>Zobacz więcej</a>
                             </div>
                         )}
                         {!photo2 && width2 > 0 && (
-                            <div className='galleryBox' style={{ width: 'auto', margin: '0.5% 0.5% 0 0.5%'}}>
-                                <a href="/o_nas" className='galleryButtonLink'>
-                                    Zobacz więcej
-                                </a>
+                            <div className='galleryBox' style={{ width: 'auto', padding: '10px'}}>
+                                <a href="/o_nas" className='galleryButtonLink'>Zobacz więcej</a>
                             </div>
                         )}
                     </div>
