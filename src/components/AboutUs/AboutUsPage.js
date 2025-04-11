@@ -4,7 +4,7 @@ import './AboutUsPageStyle.css';
 
 function AboutUs() {
     return (
-        "Hello world!"
+        <div style={{margin: '12rem'}}>"Hello world! - AboutUs"</div>
     );
 }
 

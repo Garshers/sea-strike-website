@@ -41,8 +41,14 @@ function Gallery({ photos }) {
 
                 return (
                     <div className='galleryRow' key={`row-${rowIndex}`}>
-                        {photo1 && (
+                        {photo1 && photo2 && (
                             <div className='galleryBox' style={{ width: isMobile ? 'auto' : `${width1}%`, padding: isMobile ? '0' : '10px 5px 0 10px',}}>
+                                <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id}/>
+                                <a href={endpoint1} className='galleryButtonLink'>Zobacz więcej</a>
+                            </div>
+                        )}
+                        {photo1 && !photo2 && (
+                            <div className='galleryBox' style={{ width: `${100}%`, padding: isMobile ? '0' : '10px 5px 0 10px',}}>
                                 <img src={photo1.image} alt='' className='galleryImageStyle' key={photo1.id}/>
                                 <a href={endpoint1} className='galleryButtonLink'>Zobacz więcej</a>
                             </div>
@@ -51,11 +57,6 @@ function Gallery({ photos }) {
                             <div className='galleryBox'style={{width: isMobile ? 'auto' : `${width2}%`,padding: isMobile ? '0' : '10px 10px 0 5px',}}>
                                 <img src={photo2.image} alt='' className='galleryImageStyle' key={photo2.id}/>
                                 <a href={endpoint2} className='galleryButtonLink'>Zobacz więcej</a>
-                            </div>
-                        )}
-                        {!photo2 && (
-                            <div className='galleryBox' style={{ width: 'auto', padding: '10px'}}>
-                                <a href={endpoint1} className='galleryButtonLink'>Zobacz więcej</a>
                             </div>
                         )}
                     </div>
